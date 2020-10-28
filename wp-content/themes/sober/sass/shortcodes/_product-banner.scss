@@ -1,0 +1,106 @@
+.sober-product {
+	color: #fff;
+	text-align: center;
+	position: relative;
+	padding-top: (778/894)*100%;
+
+	.product-image {
+		transition: 0.5s;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border: 0 solid #fff;
+		overflow: hidden;
+		background: no-repeat center center;
+		background-size: 100%;
+
+		img {
+			opacity: 0;
+		}
+	}
+
+	.overlink {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+	}
+
+	.product-info {
+		position: absolute;
+		left: 0;
+		bottom: 35px;
+		width: 100%;
+	}
+
+	.product-title {
+		@include font-size(4);
+		color: inherit;
+		font-weight: 300;
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		margin-bottom: 15px;
+		margin-top: 0;
+	}
+
+	.product-desc {
+		@include font-size(1.6);
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
+
+	.product-price {
+		position: relative;
+		overflow: hidden;
+		line-height: 50px;
+		height: 51px;
+
+		.price {
+			transition: 0.5s;
+			display: block;
+			@include font-size(3);
+			font-weight: 500;
+		}
+
+		.button {
+			color: inherit;
+			@include font-size(1.2);
+			font-weight: 500;
+			text-transform: uppercase;
+			line-height: 46px;
+			min-width: 160px;
+			border: 2px solid;
+			background-color: transparent;
+		}
+	}
+
+	&:hover {
+		.product-image {
+			border-width: 10px;
+		}
+
+		.product-price {
+			.price,
+			.button {
+				transform: translateY(-100%);
+			}
+		}
+	}
+}
+
+.sober-product-banner {
+	.product-image {
+		background-size: cover;
+	}
+}
+
+.sober-product-banner--color-white {
+	color: #fff;
+}
+
+.sober-product-banner--color-dark {
+	color: $color__primary;
+}

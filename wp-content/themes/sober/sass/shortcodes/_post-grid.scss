@@ -1,0 +1,27 @@
+.sober-post-grid {
+	text-align: center;
+
+	.post-thumbnail {
+		margin-bottom: 15px;
+	}
+
+	.entry-meta {
+		margin-bottom: 8px;
+	}
+
+	.entry-title {
+		@include font-size(2);
+		margin-bottom: 15px;
+		padding: 0 30px;
+		line-height: 1.5;
+	}
+
+	.read-more {
+		@include font-size(1.2);
+		font-weight: 500;
+
+		&:after {
+			bottom: -2px;
+		}
+	}
+}

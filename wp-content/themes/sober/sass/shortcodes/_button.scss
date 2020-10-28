@@ -1,0 +1,47 @@
+.sober-button {
+	&.align-left {
+		float: left;
+	}
+
+	&.align-right {
+		float: right;
+	}
+
+	&.button-light {
+		@include font-size(1.6);
+		font-weight: 500;
+
+		&:after {
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}
+
+.sober-button-wrapper--align-left {
+	text-align: left;
+}
+
+.sober-button-wrapper--align-center {
+	text-align: center;
+}
+
+.sober-button-wrapper--align-right {
+	text-align: right;
+}
+
+.sober-button-wrapper--align-justify .sober-button {
+	text-align: center;
+	width: 100%;
+}
+
+.sober-button--type-light {
+	padding-left: 0;
+	padding-right: 0;
+
+	&:after {
+		transition: none;
+		border-bottom: 2px solid;
+		background-color: transparent;
+	}
+}

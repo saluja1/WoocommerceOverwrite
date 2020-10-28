@@ -1,0 +1,32 @@
+.sober-countdown {
+	color: $color__primary;
+
+	.box {
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		font-weight: 300;
+		line-height: 30px;
+		text-align: center;
+		display: inline-block;
+		padding: 0 30px;
+		min-width: 100px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		.time {
+			@include font-size(5);
+			display: block;
+			padding-bottom: 15px;
+		}
+
+		.title {
+			@include font-size(1.4);
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.sober-chart {
+	text-align: center;
+	position: relative;
+	display: inline-block;
+
+	.text {
+		@include font-size(4.8);
+		font-weight: 300;
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -10px;
+		transform: translate(-50%, -50%);
+		line-height: 0.6667;
+		vertical-align: top;
+
+		.unit {
+			font-size: (22/48) * 100%;
+			line-height: 1;
+			vertical-align: top;
+			margin-right: 5px;
+		}
+	}
+
+	canvas {
+		max-width: 100%;
+	}
+}

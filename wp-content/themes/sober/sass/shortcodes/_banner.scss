@@ -1,0 +1,696 @@
+.sober-banner {
+	position: relative;
+	overflow: hidden;
+	font-size: 10px;
+
+	a {
+		display: block;
+		overflow: hidden;
+	}
+
+	img {
+		transition: 1s;
+		display: block;
+		width: 100%;
+	}
+
+	.banner-content {
+		color: $color__primary;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 50%;
+		transform: translate(0, -50%);
+	}
+
+	.sober-button {
+		transition: 0.5s;
+		color: $color__primary;
+		display: inline-block;
+
+		&.button-normal {
+			border: 2px solid $color__primary;
+			background: transparent;
+		}
+	}
+
+	.banner-desc {
+		font-weight: 500;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.banner-text {
+		@include font-size(3);
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		line-height: (4/3);
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	&.text-position-center .banner-content {
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&.text-position-right .banner-content {
+		left: auto;
+		right: 0;
+		transform: translate(0, -50%);
+	}
+
+	&.light-scheme {
+		.banner-desc,
+		.banner-text,
+		.sober-button {
+			color: #fff;
+		}
+
+		.button-normal {
+			border-color: #fff;
+		}
+
+		.sober-button:after {
+			background-color: #fff;
+		}
+	}
+
+	&.button-visible-hidden .sober-button {
+		display: none;
+	}
+
+	&.button-visible-hover {
+		.banner-content {
+			margin-top: 20px;
+		}
+
+		.sober-button {
+			opacity: 0;
+
+			&.button-icon-only {
+				transform: translateX(-10px);
+			}
+		}
+
+		&:hover .sober-button {
+			opacity: 1;
+
+			&.button-icon-only {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.sober-banner2 {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+	}
+
+	.banner-buttons {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+
+	.banner-button {
+		@include font-size(1.4);
+		font-weight: 500;
+		min-width: 160px;
+		min-height: 80px;
+		background-color: #fff;
+		display: inline-block;
+		padding: 25px 15px;
+		margin: 0 15px;
+	}
+}
+
+.sober-banner3 {
+	position: relative;
+	overflow: hidden;
+
+	a {
+		display: block;
+		overflow: hidden;
+		position: relative;
+	}
+
+	img {
+		transition: 1s;
+		display: block;
+		width: 100%;
+	}
+
+	.banner-content {
+		color: $color__primary;
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+	}
+
+	.banner-text {
+		@include font-size(2.4);
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		line-height: 1;
+		display: block;
+		margin-bottom: 0;
+		transition: 0.5s;
+		transform: translateY(40px);
+	}
+
+	.sober-button {
+		@include font-size(1.2);
+		transition: 0.6s;
+		margin-top: 10px;
+		transform: translateY(10px);
+		opacity: 0;
+	}
+
+	&.text-align-right {
+		.banner-content {
+			left: auto;
+			right: 30px;
+			text-align: right;
+		}
+	}
+
+	&.text-align-center {
+		.banner-content {
+			right: 30px;
+			text-align: center;
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+
+		.banner-text,
+		.sober-button {
+			transform: translateY(0);
+		}
+
+		.sober-button {
+			opacity: 1;
+		}
+	}
+}
+
+.sober-banner4 {
+	position: relative;
+	overflow: hidden;
+
+	> img {
+		transition: 1s;
+		display: block;
+		width: 100%;
+	}
+
+	> a {
+		text-indent: -999em;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.banner-content {
+		@include font-size(1.2);
+		color: $color__primary;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 40px;
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: "Sofia Pro", $font__main;
+			margin: 0 0 5px;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.sober-button {
+		@include font-size(1.2);
+		font-weight: 600;
+		color: $color__primary;
+		display: inline-block;
+		margin-top: 10px;
+		transition: 0.5s;
+	}
+
+	&.light-scheme {
+		.banner-content {
+			color: $color__light;
+
+			h1, h2, h3, h4, h5, h6 {
+				color: $color__light;
+			}
+		}
+
+		.sober-button {
+			color: $color__light;
+
+			&:after {
+				background-color: $color__light;
+			}
+		}
+
+		.button-type-normal {
+			color: $color__primary;
+			background: $color__light;
+		}
+
+		.button-type-outline {
+			border-color: inherit;
+		}
+	}
+
+	&.dark-scheme {
+		.button-type-normal {
+			color: $color__light;
+		}
+	}
+
+	&.horizontal-align-center {
+		.banner-content {
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	&.horizontal-align-right {
+		.banner-content {
+			text-align: right;
+			right: 0;
+		}
+	}
+
+	&.vertical-align-middle {
+		.banner-content {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&.vertical-align-bottom {
+		.banner-content {
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&:hover {
+		> img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.sober-banner-simple > a {
+	display: block;
+}
+
+.sober-banner-simple--left {
+	text-align: left;
+}
+
+.sober-banner-simple--right {
+	text-align: right;
+}
+
+.sober-banner-simple--center {
+	text-align: center;
+}
+
+.sober-banner-simple__text {
+	@include font-size(2);
+	font-weight: 300;
+	font-family: "Sofia Pro", Poppins, sans-serif;
+	margin: 34px 0 0 0;
+	display: inline-block;
+
+	a {
+		color: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+	}
+}
+
+.sober-banner-simple:hover .sober-banner-simple__text a {
+	box-shadow: inset 0 0 0 transparent, inset 0 -1px 0 $color__primary;
+}
+
+.sober-banner-simple--has-button {
+	.sober-banner-simple__text {
+		@include font-size(2.4);
+	}
+
+	&:hover .sober-banner-simple__text a {
+		box-shadow: none;
+	}
+}
+
+.sober-banner-simple__button {
+	margin-top: 8px;
+
+	a {
+		@include font-size(1.2);
+		font-weight: 600;
+		display: inline-block;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			border-bottom: 2px solid rgba(35, 35, 44, 0.3);
+			transition: 0.5s;
+		}
+
+		&:after {
+			width: 0;
+			border-color: $color__primary;
+		}
+
+		&:hover:after {
+			left: 0;
+			width: 100%;
+		}
+	}
+}
+
+.sober-category-banner {
+	position: relative;
+	padding-top: 100%;
+
+	.banner-inner {
+		position: absolute;
+		top: 40px;
+		bottom: 40px;
+		left: 40px;
+		right: 40px;
+		overflow: hidden;
+	}
+
+	.banner-image {
+		display: block;
+		overflow: hidden;
+		max-width: 100%;
+		max-height: 100%;
+		background: no-repeat center center;
+		background-size: 100%;
+
+		img {
+			opacity: 0;
+			max-width: none;
+			width: 100%;
+		}
+	}
+
+	.banner-content {
+		padding: 40px 20px 40px 40px;
+		width: 50%;
+		position: absolute;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 20px;
+			border-bottom: 2px solid $color__primary;
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	.banner-title {
+		@include font-size(6);
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		text-indent: -5px; // For fixing Sofia Pro font
+		margin: 0 0 20px 0;
+	}
+
+	.banner-text {
+		@include font-size(1.3);
+		color: $color__primary;
+		line-height: (28/13);
+		margin-bottom: 15px;
+	}
+
+	&.image-top-left {
+		.banner-inner {
+			padding-bottom: 195px;
+			padding-right: 195px;
+		}
+	}
+
+	// Image position
+	&.image-top-left .banner-inner {
+		padding-bottom: 195px;
+		padding-right: 195px;
+	}
+
+	&.image-top-right .banner-inner {
+		padding-bottom: 195px;
+		padding-left: 195px;
+	}
+
+	&.image-bottom-left .banner-inner {
+		padding-top: 195px;
+		padding-right: 195px;
+	}
+
+	&.image-bottom-right .banner-inner {
+		padding-top: 195px;
+		padding-left: 195px;
+	}
+
+	&.image-top .banner-inner {
+		padding-bottom: 195px;
+	}
+
+	&.image-bottom .banner-inner {
+		padding-top: 195px;
+	}
+
+	&.image-left .banner-inner {
+		padding-right: 195px;
+	}
+
+	&.image-right .banner-inner {
+		padding-left: 195px;
+	}
+
+	// Text position
+	&.text-position-top-left .banner-content {
+		top: 0;
+		left: 0;
+	}
+
+	&.text-position-top-right .banner-content {
+		top: 0;
+		right: 0;
+	}
+
+	&.text-position-middle-left .banner-content {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+	&.text-position-middle-right .banner-content {
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	&.text-position-bottom-left .banner-content {
+		bottom: 0;
+		left: 0;
+	}
+
+	&.text-position-bottom-right .banner-content {
+		bottom: 0;
+		right: 0;
+	}
+}
+
+// Elementor Banner widget
+.sober-banner-image {
+	position: relative;
+
+	img {
+		transition: 1s;
+		display: block;
+		width: 100%;
+	}
+}
+
+.sober-banner-image--hover-zoom,
+.sober-banner-image--hover-zoom_box {
+	&:hover {
+		.sober-banner-image__link > img,
+		.sober-banner-image__wrapper > img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.sober-banner-image--hover-box,
+.sober-banner-image--hover-zoom_box {
+	> :before {
+		transform: scale(0.5,.5);
+		transition: .5s;
+		opacity: 0;
+		content: "";
+		position: absolute;
+		top: 30px;
+		bottom: 30px;
+		left: 30px;
+		right: 30px;
+		z-index: 1;
+		background: rgba(17,17,20,.9);
+	}
+
+	&:hover > :before {
+		transform: none;
+		opacity: 1;
+	}
+
+	&:hover .sober-banner-image__content {
+		color: #fff;
+	}
+}
+
+.sober-banner-image__content {
+	position: absolute;
+	z-index: 2;
+}
+
+.sober-banner-image__wrapper,
+.sober-banner-image__link {
+	color: $color__primary;
+	display: block;
+	overflow: hidden;
+}
+
+.sober-banner-image__subtitle {
+	@include font-size(1.2);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.sober-banner-image__title {
+	@include font-size(3);
+	font-family: $font__heading;
+	font-weight: 300;
+}
+
+.sober-banner-image__description {
+	@include font-size(1.2);
+}
+
+.sober-banner-image__button {
+	@include font-size(1.2);
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.sober-banner-image__button--light {
+	padding-bottom: 5px;
+	border-bottom: 2px solid;
+}
+
+.sober-banner-image__button--outline {
+	line-height: (36/12);
+	display: inline-block;
+	padding: 0 30px;
+	border: 2px solid;
+
+	&:hover {
+		color: $color__light;
+		border-color: $color__primary;
+		background-color: $color__primary;
+	}
+}
+
+.sober-banner-image__button--normal {
+	color: $color__light;
+	line-height: (40/12);
+	display: inline-block;
+	padding: 0 30px;
+	background-color: $color__primary;
+}
+
+.sober-banner-image--button-visible-fadeup {
+	.sober-banner-image__subtitle,
+	.sober-banner-image__title,
+	.sober-banner-image__description {
+		transition: 0.5s;
+		transform: translateY(40px);
+	}
+
+	.sober-banner-image__buttons {
+		transform: translateY(10px);
+		opacity: 0;
+		transition: 0.6s;
+	}
+
+	&.sober-banner-image--content-keep-top {
+		.sober-banner-image__subtitle,
+		.sober-banner-image__title,
+		.sober-banner-image__description {
+			transform: none;
+		}
+	}
+
+	&:hover {
+		.sober-banner-image__subtitle,
+		.sober-banner-image__title,
+		.sober-banner-image__description {
+			transform: none;
+		}
+
+		.sober-banner-image__buttons {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}
+
+.sober-banner-image--button-visible-fadein {
+	.sober-banner-image__buttons {
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+	&:hover {
+		.sober-banner-image__buttons {
+			opacity: 1;
+		}
+	}
+}

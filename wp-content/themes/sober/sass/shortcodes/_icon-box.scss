@@ -1,0 +1,90 @@
+.sober-icon-box {
+	text-align: center;
+	padding: 0 30px;
+
+	.box-icon {
+		@include font-size(5);
+		color: inherit;
+		display: inline-block;
+		margin-bottom: 30px;
+		line-height: 1;
+
+		i {
+			vertical-align: 0.075em;
+		}
+
+		svg {
+			fill: currentColor;
+			stroke: currentColor;
+			width: 1em;
+			height: 1em;
+			vertical-align: -0.075em;
+		}
+	}
+
+	.box-title {
+		@include font-size(2.2);
+		font-weight: 500;
+		color: $color__primary;
+		margin: 0 0 20px 0;
+	}
+
+	.box-content {
+		@include font-size(1.4);
+		font-weight: 400;
+		color: $color__text-main;
+	}
+
+	&.icon-style-circle {
+		.box-icon {
+			border-radius: 100%;
+			border: 2px solid #e4e6eb;
+			width: 110px;
+			height: 110px;
+			line-height: 110px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&.icon-style-round {
+		.box-icon {
+			color: #fff;
+			border-radius: 50%;
+			background-color: $color__primary;
+			width: 110px;
+			height: 110px;
+			line-height: 110px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&.small-title {
+		.box-icon {
+			margin-bottom: 35px;
+		}
+
+		.box-title {
+			@include font-size(1.8);
+		}
+	}
+}
+
+.sober-icon-box--color-light {
+	color: $color__light;
+
+	.box-content {
+		color: $color__light;
+	}
+
+	&.icon-style-round .box-icon {
+		color: $color__primary;
+		background-color: $color__light;
+	}
+}
+
+.sober-icon-box-carousel {
+	.owl-dots {
+		text-align: center;
+		margin-top: 60px;
+	}
+}

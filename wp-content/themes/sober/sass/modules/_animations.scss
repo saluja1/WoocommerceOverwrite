@@ -1,0 +1,73 @@
+.animated  {
+	-webkit-animation-duration: 1000ms;
+	animation-duration: 1000ms ;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes bubble {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes bubble {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes soberFadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 50px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.soberFadeInUp {
+	animation-name: soberFadeInUp;
+}
+
+@keyframes soberFadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.soberFadeIn {
+	animation-name: soberFadeIn;
+}
+
+@keyframes soberFadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.soberFadeOut {
+	animation-name: soberFadeOut;
+}
+
+.soberAnimation {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}

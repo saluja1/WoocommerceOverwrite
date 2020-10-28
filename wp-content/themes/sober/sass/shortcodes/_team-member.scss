@@ -1,0 +1,91 @@
+.sober-team-member {
+	position: relative;
+	text-align: center;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		transition: all 0.5s;
+		background: darken(desaturate($color__primary, 3.2843), 8.2353);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.member-socials {
+		transition: all 0.5s;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		z-index: 50;
+		width: 100%;
+
+		a {
+			color: #fff;
+			line-height: 46px;
+			transform: scale(0.5);
+			opacity: 0;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			margin: 10px;
+		}
+	}
+
+	.member-info {
+		padding: 30px 0;
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+		z-index: 10;
+		background-color: #fff;
+		transition: all 0.4s;
+	}
+
+	.member-name {
+		@include font-size(2.2);
+		font-weight: 500;
+		color: $color__primary;
+		margin: 0 0 10px;
+		transition: all 0.5s;
+	}
+
+	.member-job {
+		@include font-size(1);
+		font-weight: 600;
+		color: $color__primary;
+		text-transform: uppercase;
+		transition: all 0.5s;
+	}
+
+	&:hover {
+		&:before {
+			opacity: 0.8;
+		}
+
+		.member-socials a {
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		.member-info {
+			background-color: transparent;
+		}
+
+		.member-job,
+		.member-name {
+			color: #fff;
+		}
+	}
+}

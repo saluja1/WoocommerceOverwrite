@@ -1,0 +1,14 @@
+.sober-product-carousel {
+	ul.products {
+		width: auto;
+	}
+
+	ul.products.owl-carousel li.product {
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	.owl-dots {
+		text-align: center;
+	}
+}

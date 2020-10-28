@@ -1,0 +1,139 @@
+.wpb_content_element {
+	.mc4wp-form-fields {
+		display: flex;
+		flex-wrap: wrap;
+
+		input {
+			height: 60px;
+			border-bottom: 0;
+		}
+
+		input[type=email] {
+			flex-grow: 1;
+			padding: 0 30px;
+		}
+
+		input[type=submit] {
+			margin-left: 10px;
+		}
+	}
+}
+
+.sober-subscribe-box__title {
+	@include font-size(2.4);
+	font-weight: 300;
+	font-family: $font__heading;
+	margin: 0 0 5px 0;
+}
+
+.sober-subscribe-box__form {
+	form {
+		margin-bottom: 12px;
+	}
+
+	.mc4wp-form-fields {
+		display: flex;
+	}
+
+	input[type=text],
+	input[type=email],
+	select,
+	textarea {
+		flex: 1;
+	}
+
+	button,
+	input[type=button],
+	input[type=submit] {
+		font-weight: 600;
+		margin-left: 10px;
+	}
+}
+
+.sober-subscribe-box--default {
+	.sober-subscribe-box__desc {
+		margin: 10px 0 20px 0;
+	}
+
+	input[type=text],
+	input[type=email],
+	select,
+	textarea {
+		padding: 0 30px;
+		border: 1px solid;
+	}
+
+	input[type=text],
+	input[type=email] {
+		height: 60px;
+	}
+
+	button,
+	input[type=button],
+	input[type=submit] {
+		height: 60px;
+		min-width: 200px;
+	}
+}
+
+.sober-subscribe-box--inline {
+	display: flex;
+	align-items: flex-end;
+	padding: 90px 0;
+
+	.sober-subscribe-box__content,
+	.sober-subscribe-box__form {
+		flex: 1;
+	}
+
+	.sober-subscribe-box__content {
+		padding-right: 30px;
+	}
+
+	.sober-subscribe-box__title {
+		font-weight: 300;
+	}
+
+	.sober-subscribe-box__form {
+		input[type=text],
+		input[type=email],
+		select,
+		textarea {
+			@include font-size(1.2);
+			border-bottom-color: #e4e6eb;
+			background: transparent;
+
+			&:hover,
+			&:focus {
+				border-bottom-color: inherit;
+			}
+		}
+
+		button,
+		input[type=button],
+		input[type=submit] {
+			@include font-size(1.2);
+			color: $color__primary;
+			text-transform: uppercase;
+			padding-left: 0;
+			padding-right: 0;
+			border-bottom: 2px solid #e4e6eb;
+			background: transparent;
+
+			&:hover {
+				color: $color__primary;
+				border-color: inherit;
+				background: transparent;
+			}
+		}
+	}
+}
+
+.sober-subscribe-box--elementor.sober-subscribe-box--default {
+	input[type=text],
+	input[type=email],
+	select,
+	textarea {
+		border: none;
+	}
+}

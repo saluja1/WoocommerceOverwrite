@@ -1,0 +1,164 @@
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	padding: 20px 20px 20px 80px !important;
+	margin: 20px 0 !important;
+	border: none;
+
+	&:before {
+		display: none;
+	}
+
+	.box-content .button {
+		@extend .line-hover;
+		color: $color__primary;
+		line-height: 1.6;
+		min-width: 0;
+		height: auto;
+		background-color: transparent;
+		float: none;
+		margin-left: 10px;
+
+		&:after {
+			bottom: 0;
+		}
+
+		&:hover {
+			color: $color__primary;
+			background-color: transparent;
+		}
+	}
+}
+
+.woocommerce-error {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.woocommerce-page-header {
+	@include font-size(1.6);
+	font-weight: 500;
+	color: $color__secondary;
+	text-align: center;
+	background-color: $color__border;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		margin: 0 30px;
+
+		&:after {
+			bottom: 0;
+		}
+
+		a {
+			color: $color__secondary;
+			padding: 25px 0;
+			display: block;
+		}
+
+		&:hover,
+		&.active {
+			a {
+				color: $color__primary;
+			}
+
+			.count {
+				color: #ffffff;
+				background-color: $color__primary;
+			}
+		}
+	}
+
+	.count {
+		@include font-size(1);
+		font-weight: 600;
+		line-height: 20px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #e4e6eb;
+		display: inline-block;
+		margin: -2px 0 0 10px;
+		vertical-align: middle;
+		transition: 0.5s;
+	}
+}
+
+.woocommerce nav.woocommerce-pagination ul {
+	border: none;
+	border-bottom: 2px solid #f1f2f4;
+	margin-bottom: 55px;
+
+	li {
+		padding: 20px 15px;
+		border: none;
+		overflow: visible;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		a, span {
+			@include font-size(1.4);
+			color: $color__secondary;
+			font-weight: 500;
+			padding: 0;
+			min-width: 12px;
+			min-height: 20px;
+			line-height: 20px;
+			transition: all 0.5s;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+			}
+		}
+
+		span.current {
+			color: $color__primary;
+			background-color: transparent;
+			position: relative;
+
+			&:after {
+				position: absolute;
+				content: '';
+				background-color: $color__primary;
+				height: 2px;
+				width: 100%;
+				left: 0;
+				bottom: -22px;
+			}
+		}
+
+		svg {
+			fill: $color__secondary;
+			transition: all 0.5s;
+		}
+
+		&:hover {
+			svg {
+				fill: $color__primary;
+			}
+
+			a {
+				color: $color__primary;
+			}
+		}
+	}
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding-left: 0;
+}

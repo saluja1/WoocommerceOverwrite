@@ -1,0 +1,44 @@
+.vc_row {
+	background-position: center;
+
+	.wpb_content_element {
+		margin-bottom: 0;
+	}
+}
+
+.site-content {
+	.vc_col-has-fill > .vc_column-inner,
+	.vc_row-has-fill + .vc_row-full-width + .vc_row > .vc_column_container > .vc_column-inner,
+	.vc_row-has-fill + .vc_row > .vc_column_container > .vc_column-inner,
+	.vc_row-has-fill + .vc_vc_row > .vc_row > .vc_vc_column > .vc_column_container > .vc_column-inner,
+	.vc_row-has-fill + .vc_vc_row_inner > .vc_row > .vc_vc_column_inner > .vc_column_container > .vc_column-inner,
+	.vc_row-has-fill > .vc_column_container > .vc_column-inner,
+	.vc_row-has-fill > .vc_row > .vc_vc_column > .vc_column_container > .vc_column-inner,
+	.vc_row-has-fill > .vc_vc_column_inner > .vc_column_container > .vc_column-inner,
+	.vc_section.vc_section-has-fill,
+	.vc_section.vc_section-has-fill + .vc_row-full-width + .vc_section,
+	.vc_section.vc_section-has-fill + .vc_section {
+		padding-top: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	[data-vc-full-width] > .sober-container-large {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media (min-width: 992px) {
+	[data-vc-full-width] > .sober-container-large {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+@media (min-width: 1200px) {
+	[data-vc-full-width] > .sober-container-large {
+		padding-left: 85px;
+		padding-right: 85px;
+	}
+}

@@ -1,0 +1,92 @@
+.sober-pricing-table {
+	transition: 0.5s;
+	border: 1px solid $color__border;
+
+	&:hover {
+		box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+	}
+
+	.table-header {
+		text-align: center;
+		color: #fff;
+		line-height: 1;
+		padding: 30px;
+		margin: -1px;
+		background-color: #6dcff6;
+
+		.plan-name {
+			@include font-size(1.2);
+			font-weight: 600;
+			text-transform: uppercase;
+			color: #fff;
+			margin: 0 0 30px 0;
+			min-height: 14px;
+		}
+
+		.pricing {
+			@include font-size(4.8);
+			font-weight: 300;
+			font-family: "Sofia Pro", Poppins, sans-serif;
+			margin-bottom: 25px;
+			line-height: 34px;
+
+			.currency {
+				@include font-size(2.2);
+				vertical-align: super;
+				margin-right: 5px;
+			}
+		}
+
+		.recurrence {
+			@include font-size(1.1);
+			font-weight: 600;
+			min-height: 11px;
+		}
+	}
+
+	.table-content {
+		padding: 30px;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			@include font-size(1.2);
+			color: $color__secondary;
+			font-weight: 500;
+			margin-bottom: 20px;
+			overflow: hidden;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.feature-name,
+		.feature-value {
+			float: left;
+			width: 50%;
+		}
+
+		.feature-value {
+			text-align: right;
+		}
+	}
+
+	.table-footer {
+		padding: 0 30px 30px 30px;
+
+		.button {
+			@include font-size(1.1);
+			font-weight: 600;
+			text-transform: uppercase;
+			line-height: 40px;
+			min-width: 0;
+			width: 100%;
+			background-color: #6dcff6;
+		}
+	}
+}

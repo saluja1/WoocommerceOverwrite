@@ -1,0 +1,505 @@
+
+.sober-banner-grid-4 {
+	overflow: hidden;
+
+	.sober-banner,
+	.sober-banner2,
+	.sober-banner3 {
+		float: left;
+
+		&:nth-child(8n+1) {
+			clear: left;
+		}
+
+		&:nth-child(8n+1),
+		&:nth-child(8n+4),
+		&:nth-child(8n+7),
+		&:nth-child(8n+8) {
+			width: 50%;
+		}
+
+		&:nth-child(8n+2),
+		&:nth-child(8n+3),
+		&:nth-child(8n+5),
+		&:nth-child(8n+6) {
+			width: 25%;
+		}
+
+		&:nth-child(8n+7) {
+			float: right;
+		}
+	}
+
+	.sober-banner {
+		a {
+			display: block;
+			position: relative;
+
+			&:before {
+				transform: scale(0.5, 0.5);
+				transition: 0.5s;
+				opacity: 0;
+				content: "";
+				position: absolute;
+				top: 30px;
+				bottom: 30px;
+				left: 30px;
+				right: 30px;
+				z-index: 1;
+				background: rgba(17, 17, 20, 0.9);
+			}
+		}
+
+		.banner-content {
+			z-index: 2;
+		}
+
+		.sober-button {
+			transition: 0.7s;
+		}
+
+		&:hover {
+			a:before {
+				transform: scale(1, 1);
+				opacity: 1;
+			}
+		}
+	}
+
+	&.reverse-order {
+		.sober-banner,
+		.sober-banner2,
+		.sober-banner3 {
+			float: right;
+
+			&:nth-child(8n+1) {
+				clear: both;
+			}
+
+			&:nth-child(8n+7) {
+				float: left;
+			}
+
+			&:nth-child(8n+6),
+			&:nth-child(8n+7) {
+				width: 25%;
+			}
+
+			&:nth-child(8n+5),
+			&:nth-child(8n+8) {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+}
+
+.sober-banner-grid-5 {
+	$width: (540/1850)*100%;
+
+	padding: 0 60px;
+	overflow: hidden;
+	position: relative;
+
+	.banners-wrap {
+		overflow: hidden;
+		margin: -10px;
+	}
+
+	.banners {
+		float: left;
+		width: $width;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		> div {
+			padding: 10px 0;
+			background: center no-repeat;
+			background-clip: content-box;
+			background-size: auto 100%;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.banners-column-2 {
+		width: (100% - 2*$width);
+	}
+}
+
+.sober-banner-grid-5v2 {
+	margin: -10px;
+	overflow: hidden;
+
+	> * {
+		float: left;
+		padding: 10px;
+		overflow: hidden;
+	}
+
+	> :nth-child(5n+1) {
+		width: 39.08%;
+	}
+
+	> :nth-child(5n+2),
+	> :nth-child(5n+5) {
+		width: 33.1%;
+	}
+
+	> :nth-child(5n+3),
+	> :nth-child(5n+4) {
+		width: 27.58%;
+	}
+
+	> :nth-child(5n+5) {
+		float: right;
+	}
+
+	.sober-banner4 {
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 10px solid $color__light;
+			z-index: 1;
+		}
+
+		> a {
+			z-index: 2;
+		}
+
+		&:nth-child(5n+1):before {
+			border-bottom-width: 11px;
+		}
+
+		h1 {
+			@include font-size(6);
+		}
+
+		h2 {
+			@include font-size(4.8);
+		}
+
+		h3 {
+			@include font-size(3.2);
+		}
+
+		h4 {
+			@include font-size(2.8);
+		}
+
+		.banner-content {
+			padding: 40px 50px;
+		}
+	}
+}
+
+.sober-banner-grid-6 {
+	overflow: hidden;
+	position: relative;
+	padding: 0 60px;
+	margin-left: -4px;
+	margin-right: -4px;
+
+	.sober-banner,
+	.sober-banner2,
+	.sober-banner3 {
+		float: left;
+		padding: 4px;
+
+		&:nth-child(6n+1) {
+			clear: left;
+		}
+
+		&:nth-child(6n+1),
+		&:nth-child(6n+2),
+		&:nth-child(6n+3) {
+			width: 33.33333%;
+		}
+
+		&:nth-child(6n+4),
+		&:nth-child(6n+5),
+		&:nth-child(6n) {
+			width: (357/1608)*100%;
+		}
+	}
+
+	&.reverse-order {
+		.sober-banner,
+		.sober-banner2,
+		.sober-banner3 {
+			float: right;
+
+			&:nth-child(6n+1) {
+				clear: right;
+			}
+		}
+	}
+}
+
+/** Elementor banner grid */
+.sober-banner-grid__banner--content-top-left .sober-banner-image__content {
+	top: 0;
+	left: 0;
+}
+
+.sober-banner-grid__banner--content-top-center .sober-banner-image__content {
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.sober-banner-grid__banner--content-top-right .sober-banner-image__content {
+	top: 0;
+	right: 0;
+	text-align: right;
+}
+
+.sober-banner-grid__banner--content-left .sober-banner-image__content {
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+}
+
+.sober-banner-grid__banner--content-center .sober-banner-image__content {
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	text-align: center;
+	width: 100%;
+}
+
+.sober-banner-grid__banner--content-right .sober-banner-image__content {
+	top: 50%;
+	right: 0;
+	text-align: right;
+	transform: translate(0, -50%);
+}
+
+.sober-banner-grid__banner--content-bottom-left .sober-banner-image__content {
+	bottom: 0;
+	left: 0;
+}
+
+.sober-banner-grid__banner--content-bottom-center .sober-banner-image__content {
+	bottom: 0;
+	left: 0;
+	transform: translate(-50%, 0);
+	text-align: center;
+	width: 100%;
+}
+
+.sober-banner-grid__banner--content-bottom-right .sober-banner-image__content {
+	bottom: 0;
+	right: 0;
+	text-align: right;
+}
+
+.sober-banner-grid__banner--content-left,
+.sober-banner-grid__banner--content-center,
+.sober-banner-grid__banner--content-right {
+	&.sober-banner-image--button-visible-fadein,
+	&.sober-banner-image--button-visible-fadeup {
+		.sober-banner-image__content {
+			margin-top: 20px;
+		}
+	}
+}
+
+/** Elementor banner grid 4 widget */
+.sober-banner-grid-4__banner {
+	float: left;
+
+	&:nth-child(4n+1),
+	&:nth-child(4n+4) {
+		width: 50%;
+	}
+
+	&:nth-child(4n+2),
+	&:nth-child(4n+3) {
+		width: 25%;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.sober-banner-image__content {
+		color: $color__light;;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		padding: 20px;
+		width: 100%;
+	}
+
+	.sober-banner-image__button--normal {
+		color: $color__primary;
+		background-color: $color__light;
+	}
+
+	.sober-banner-image__title {
+		font-weight: 300;
+		line-height: 1.3333;
+	}
+
+	.sober-banner-image-1__title {
+		@include font-size(6);
+	}
+
+	.sober-banner-image-4__title {
+		@include font-size(3.5);
+	}
+
+	.sober-banner-image__buttons {
+		margin-top: 20px;
+	}
+}
+
+.sober-banner-grid-4__banner--content-left .sober-banner-image__content {
+	left: 0;
+	width: auto;
+	min-width: 50%;
+}
+
+.sober-banner-grid-4__banner--content-right .sober-banner-image__content {
+	right: 0;
+	width: auto;
+	min-width: 50%;
+}
+
+.sober-banner-grid-4__banner--content-center .sober-banner-image__content {
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/** Elementor banner grid 5 widget */
+.sober-banner-grid-5--elementor {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.sober-banner-grid-5__banner {
+	.sober-banner-image__buttons {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translate(0, -50%);
+	}
+
+	.sober-banner-image__button {
+		@include font-size(1.4);
+		font-weight: 500;
+		text-transform: none;
+		min-width: 160px;
+		min-height: 80px;
+		background-color: #fff;
+		display: inline-block;
+		padding: 25px 15px;
+		margin: 0 15px;
+	}
+}
+
+/** Elemntor banner grid 5 v2 widget */
+.sober-banner-grid-5v2--elementor {
+	.sober-banner-image__content {
+		position: absolute;
+		padding: 40px 50px;
+	}
+
+	.sober-banner-image__title {
+		@include font-size(3.2);
+		line-height: 1.2;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+
+	.sober-banner-image-1__title {
+		@include font-size(4.8);
+	}
+
+	.sober-banner-image__description {
+		margin-bottom: 10px;
+	}
+}
+
+/** Elemntor banner grid 6 widget */
+.sober-banner-grid-6--elementor {
+	margin: -4px;
+
+	.sober-banner-image {
+		float: left;
+		padding: 4px;
+
+		&:nth-child(6n+1) {
+			clear: left;
+		}
+
+		&:nth-child(6n+1),
+		&:nth-child(6n+2),
+		&:nth-child(6n+3) {
+			width: 33.33333%;
+		}
+
+		&:nth-child(6n+4),
+		&:nth-child(6n+5),
+		&:nth-child(6n) {
+			width: (357/1608)*100%;
+		}
+	}
+
+	.sober-banner-image__content {
+		padding: 40px;
+	}
+
+	.sober-banner-image__subtitle {
+		margin-bottom: 10px;
+	}
+
+	.sober-banner-image__title {
+		@include font-size(2.4);
+		line-height: 1;
+	}
+
+	.sober-banner-image-1__title {
+		@include font-size(4);
+	}
+
+	.sober-banner-image__description {
+		margin-top: 10px;
+	}
+
+	.sober-banner-image__buttons {
+		margin-top: 10px;
+	}
+
+	.sober-banner-image__button--light {
+		@include font-size(1.2);
+		text-transform: none;
+
+		&.sober-banner-image-1__button {
+			@include font-size(1.6);
+		}
+	}
+}
+
+.sober-banner-grid-6--reverse {
+	.sober-banner-image {
+		float: right;
+
+		&:nth-child(6n+1) {
+			clear: right;
+		}
+	}
+}

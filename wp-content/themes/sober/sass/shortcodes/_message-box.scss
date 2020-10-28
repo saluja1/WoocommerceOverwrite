@@ -1,0 +1,70 @@
+.sober-message-box {
+	position: relative;
+	padding: 20px 20px 20px 80px;
+	margin-bottom: 20px;
+
+	.message-icon {
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+	}
+
+	.close {
+		color: inherit;
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		opacity: 1;
+		transform: translateY(-50%);
+
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	.box-content {
+		@include font-size(1.4);
+		font-weight: 500;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	svg {
+		fill: currentColor;
+		stroke: currentColor;
+	}
+
+	&.success {
+		color: #299c77;
+		background-color: #bff9d0;
+	}
+
+	&.info {
+		color: #65a6c7;
+		background-color: #c3ebff;
+	}
+
+	&.danger {
+		color: #d45757;
+		background-color: #ffd0d0;
+	}
+
+	&.warning {
+		color: #e6ae15;
+		background-color: #fff4b8;
+	}
+
+	&.closeable {
+		padding-right: 65px;
+	}
+}
+
+.sober-message-box--elementor {
+	margin-bottom: 0;
+}

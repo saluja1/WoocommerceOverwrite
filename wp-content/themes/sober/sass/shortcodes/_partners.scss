@@ -1,0 +1,77 @@
+.sober-partners {
+	text-align: center;
+	margin-right: -15px;
+	margin-left: -15px;
+
+	.partner {
+		vertical-align: middle;
+		display: inline-block;
+		margin-right: -4px;
+		width: 25%;
+		padding: 15px;
+		white-space: nowrap;
+	}
+
+	.partner-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid $color__border;
+		min-height: 200px;
+
+		img {
+			max-height: 100%;
+		}
+	}
+
+	&.plain-layout {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.partner {
+			width: auto;
+			padding: 15px;
+			margin: 0;
+			min-width: 20%;
+		}
+
+		.partner-logo {
+			min-height: 0;
+			display: block;
+			border: 0;
+
+			&:hover img {
+				filter: grayscale(0);
+				opacity: 1;
+			}
+		}
+
+		img {
+			transition: 0.5s;
+			filter: grayscale(100%);
+			opacity: 0.5;
+		}
+	}
+}
+
+.sober-logos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.sober-logos__logo-inner {
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+@for $i from 1 through 10 {
+	.sober-logos--columns-#{$i} .sober-logos__logo {
+		width: (100% / $i);
+	}
+}

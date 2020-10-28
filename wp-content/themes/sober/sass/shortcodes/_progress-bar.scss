@@ -1,0 +1,33 @@
+.vc_progress_bar.wpb_content_element {
+	overflow: hidden;
+
+	.vc_single_bar {
+		height: 8px;
+		box-shadow: none;
+		border-radius: 0;
+		background-color: #e4e6eb;
+		margin-bottom: 50px;
+		margin-top: 30px;
+
+		.vc_label {
+			@include font-size(1.4);
+			font-weight: 500;
+			padding: 0;
+			top: -30px;
+		}
+
+		.vc_label_units {
+			@include font-size(1.4);
+			font-weight: 500;
+			color: $color__primary;
+			position: absolute;
+			top: -30px;
+			text-align: right;
+		}
+
+		.vc_bar {
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
+}

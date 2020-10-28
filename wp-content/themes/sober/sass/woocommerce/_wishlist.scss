@@ -1,0 +1,121 @@
+.woocommerce-wishlist {
+	h1.entry-title {
+		@extend .screen-reader-text;
+		margin: 0;
+	}
+
+	table.wishlist_table {
+		border-bottom: 1px solid $color__border;
+
+		.product-name {
+			width: 30%;
+		}
+
+		.product-price {
+			padding-right: 30px;
+			direction: initial;
+		}
+
+		.product-inline-price,
+		.product-inline-stock-status,
+		.product-inline-button {
+			@include font-size(1.4);
+			line-height: 1.4;
+			color: $color__secondary;
+			display: none;
+		}
+
+		.product-inline-button {
+			.button {
+				color: $color__primary;
+				text-transform: uppercase;
+				line-height: 1.75;
+				min-width: 0;
+				margin-top: 10px;
+				background: none;
+
+				.screen-reader-text {
+					position: static !important;
+					clip: unset;
+					clip-path: none;
+					width: auto;
+					height: auto;
+					margin: 0;
+				}
+
+				&.loading:after {
+					top: 0;
+				}
+			}
+
+			svg,
+			.added_to_cart {
+				display: none;
+			}
+		}
+
+		.product-add-to-cart {
+			text-align: right;
+
+			svg {
+				display: none;
+			}
+
+			.screen-reader-text {
+				clip: auto;
+				position: static !important;
+				clip-path: none;
+			}
+
+			.loading:after {
+				top: 0;
+			}
+
+			.added_to_cart {
+				display: none;
+			}
+		}
+
+		td.product-stock-status {
+			color: $color__secondary;
+			text-transform: uppercase;
+		}
+	}
+
+	.wishlist-share {
+		text-align: center;
+		padding-top: 30px;
+
+		h4 {
+			display: inline-block;
+			padding-bottom: 5px;
+			border-bottom: 2px solid $color__primary;
+		}
+
+		ul {
+			display: inline-block;
+		}
+
+		li {
+			margin: 0;
+			padding: 0 20px;
+
+			a {
+				color: $color__secondary;
+
+				&:hover {
+					color: $color__primary;
+				}
+			}
+		}
+	}
+
+	.wishlist-empty {
+		text-align: center;
+		padding: 20px 0;
+	}
+
+	.return-to-shop {
+		text-align: center;
+	}
+}

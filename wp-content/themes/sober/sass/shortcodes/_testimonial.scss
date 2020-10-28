@@ -1,0 +1,60 @@
+.sober-testimonial {
+	overflow: hidden;
+
+	.author-photo {
+		text-align: center;
+		border-radius: 50%;
+		overflow: hidden;
+		width: 160px;
+		height: 160px;
+		margin: 0 auto;
+
+		img {
+			border-radius: 50%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.testimonial-entry {
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	.testimonial-content {
+		@include font-size(1.6);
+	}
+
+	.testimonial-author {
+		@include font-size(1.4);
+		font-weight: 500;
+		color: $color__primary;
+		margin-top: 15px;
+	}
+
+	&.testimonial-align-left {
+		.author-photo {
+			float: left;
+			margin: 0;
+		}
+
+		.testimonial-entry {
+			text-align: left;
+			margin-left: 160px;
+			padding-left: 35px;
+		}
+	}
+
+	&.testimonial-align-right {
+		.author-photo {
+			float: right;
+			margin: 0;
+		}
+
+		.testimonial-entry {
+			text-align: right;
+			margin-right: 160px;
+			padding-right: 35px;
+		}
+	}
+}

@@ -1,0 +1,235 @@
+/*
+Theme Name: Sober Child Theme
+Theme URI: http://uix.store/sober/
+Author: UIX Themes
+Author URI: http://uix.store
+Description: Sober is a fully responsive Premium WordPress Theme with a pixel perfect design and extensive functionality
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sober
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Template: sober
+*/
+
+.discount-wrapper {
+	margin: 25px 0 0 0;
+}
+
+.discount-wrapper table {
+	text-align: center;
+}
+
+.discount-wrapper table th {
+	text-align: center;
+}
+
+.table-bordered.table {
+	border: 1px solid #dddddd;
+}
+
+.table-bordered.table > thead > tr > th,
+.table-bordered.table > tbody > tr > th,
+.table-bordered.table > tfoot > tr > th,
+.table-bordered.table > thead > tr > td,
+.table-bordered.table > tbody > tr > td,
+.table-bordered.table > tfoot > tr > td {
+	border-color: #dddddd;
+}
+
+.table-bordered.table tr td {
+	padding: 0 !important;
+	min-width: 50px;
+	height: 35px;
+	text-align: center;
+	vertical-align: middle !important;
+}
+
+.table-bordered.table tr th {
+	background-color: #ffa162;
+	color: #ffffff;
+	text-align: center;
+}
+
+.woocommerce .branding-wrapper {
+	margin: 0 0 15px;
+	text-align: left;
+	font-size: 16px;
+}
+
+.woocommerce .branding-wrapper label {
+	margin: 0;
+	cursor: pointer;
+}
+
+.woocommerce .branding-wrapper input[type="checkbox"] {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	width: 15px;
+	height: 15px;
+}
+
+.woocommerce .table input[type="file"] {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.woocommerce .table input[type="number"] {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 5px;
+    height: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.woocommerce .custom-branding {
+	display: none;
+}
+
+.woocommerce .finalPrice {
+	text-align: center;
+	margin: 15px 0;
+	font-size: 18px;
+}
+
+.woocommerce .cart-error-message {
+    margin: 0 0 15px 0;
+    color: #ff0000;
+}
+
+.woocommerce div.product.layout-style-3 {
+	width: 100%;
+	padding-right: 0;
+}
+
+.woocommerce .size_color_inner .color-box {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px;
+	width: 25px;
+	height: 25px;
+}
+
+.woocommerce .nav-tabs > li > a.active {
+	color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.woocommerce .tab-content {
+    margin: 25px 0;
+}
+
+.woocommerce table.shop_table .product-thumbnail {
+	vertical-align: top;
+}
+
+.woocommerce .size_color_inner_wrapper {
+	margin: 20px 0 0 0;
+	clear: both;
+}
+
+.woocommerce .woocommerce-product-gallery__image {
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+.woocommerce-cart .cart_size_color_items {
+	margin: 15px 15px 0 0;
+}
+
+.woocommerce-cart .cart_logo_quantity_items {
+	margin: 0 15px 0 0;
+}
+
+.woocommerce-cart .quantity-image {
+	width: 50px !important;
+}
+
+.cart_size_color_items .table-bordered.table tr td:first-of-type {
+	text-align: left;
+}
+
+.cart_size_color_items .table-bordered.table {
+	min-width: 300px;
+}
+
+.cart_logo_quantity_items .table-bordered.table {
+	min-width: 300px;
+}
+
+.woocommerce-cart .cart_size_color_items .color-box {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px;
+	width: 35px;
+	height: 35px;
+}
+
+@media screen and (max-width: 767px) {
+
+	.woocommerce-cart table.cart .product-thumbnail {
+		min-width: 75px;
+	}
+
+	.woocommerce-cart table.cart .product-thumbnail img {
+		min-width: 65px;
+		margin: 0 10px 0 0;
+		display: block;
+		width: 65px;
+	}
+
+	.custom-branding .nav > li > a {
+		padding: 10px 5px;
+	}
+
+	.woocommerce-cart .cart_coupon .coupon_button .input-text {
+		width: 65%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.woocommerce-cart .cart_size_color_items {
+		width: 200px;
+		margin: 10px 10px 0 0;
+		overflow-x: auto;
+	}
+
+	.woocommerce-cart .cart_logo_quantity_items {
+		width: 200px;
+		margin: 0 10px 0 0;
+		overflow-x: auto;
+	}
+
+	.size_color_inner_wrapper {
+		max-width: 300px;
+		overflow-x: auto;
+	}
+
+	.size_logo_inner_wrapper {
+		max-width: 300px;
+		overflow-x: auto;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.woocommerce-cart .cart_size_color_items {
+		width: 125px;
+	}
+
+	.woocommerce-cart .cart_logo_quantity_items {
+		width: 125px;
+	}
+}

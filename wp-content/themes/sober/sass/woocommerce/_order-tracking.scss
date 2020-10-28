@@ -1,0 +1,39 @@
+.woocommerce-order-tracking {
+	h1.entry-title {
+		@extend .screen-reader-text;
+		margin: 0;
+	}
+
+	.track-note {
+		margin-bottom: 60px;
+	}
+
+	.track-fields {
+		padding: 40px;
+		border: 2px solid $color__border;
+
+		.form-row {
+			margin-bottom: 40px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			label {
+				float: left;
+				min-width: 18%;
+				padding: 5px 15px 5px 0;
+			}
+
+			input.input-text {
+				margin-left: 18%;
+				display: block;
+				width: 64%;
+			}
+
+			.button {
+				margin-left: 18%;
+			}
+		}
+	}
+}

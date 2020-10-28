@@ -1,0 +1,13 @@
+.sober-google-map__markers {
+	display: none;
+}
+
+.sober-google-map__info {
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
